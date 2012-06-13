@@ -6,10 +6,10 @@ It saves the state of each query and only triggers when a transition happens.
 
 ## Usage
 
-$(el).respondTo(query, function(matches){
-    if(matches){
-        $(this).html("Query matches now.");
-    }else{
-        $(this).html("Query does not match anymore.");
-    }
-});
+    $(el).respondTo(query, function(matches){
+        if(matches){
+            $(this).html("Query matches now.");
+        }else{
+            $(this).html("Query does not match anymore.");
+        }
+    });
