@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>jquery.respondTo example</title>
+</head>
+<body>
+    <style>
+    @media all and (orientation:landscape){
+        body{
+            background-color: #000;
+            color: #FFF;
+        }
+    }
+    @media all and (orientation:portrait){
+        body{
+            background-color: #FFF;
+            color: #000;
+        }
+    }
+    </style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.respondto.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	    $("body").respondTo("(orientation:landscape)", function(m){
+            if(m) $(this).html("LANDSCAPE");
+	    }).respondTo("(orientation:portrait)", function(m){
+	        if(m) $(this).html("PORTRAIT");
+	    });
+	});
+	</script>
+</body>
+</html>
